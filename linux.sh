@@ -7,4 +7,4 @@ mongod --port 27018 --dbpath $(pwd)/db1 --replSet myReplicaSet --bind_ip localho
 mongod --port 27019 --dbpath $(pwd)/db2 --replSet myReplicaSet --bind_ip localhost --fork --logpath $(pwd)/log2
 
 # Login to your cluster to run the rs.initiate() command
-mongosh 
+mongosh --eval "rs.initiate()"
